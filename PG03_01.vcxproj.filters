@@ -32,6 +32,21 @@
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp">
       <Filter>KamataEngine\Adapter</Filter>
     </ClCompile>
+    <ClCompile Include="ClearScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="StageScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -112,5 +127,11 @@
     <ClInclude Include="..\DirectXGame\math\Vector4.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
+    <ClInclude Include="ClearScene.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="StageScene.h" />
+    <ClInclude Include="struct.h" />
   </ItemGroup>
 </Project>
