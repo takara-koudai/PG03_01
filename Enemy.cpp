@@ -8,7 +8,7 @@ void Enemy::Initialize()
 
 	radius_ = { 50.0f,50.0f };
 
-	speed_ = 1.0f;
+	speed_ = 6.0f;
 }
 
 void Enemy::Update()
