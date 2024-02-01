@@ -1,33 +1,30 @@
 #pragma once
-#include <memory>
-#include "Scene.h"
-#include "StageScene.h"
-#include "TitleScene.h"
+#include"IScene.h"
 #include "ClearScene.h"
-#include "Input.h"
+#include"StageScene.h"
+#include"TitleScene.h"
 
-class GameManager 
+class GameManager
 {
 private:
-	//シーンを保持するメンバ関数
+
+	//シーンを保持するメンバ変数
 	std::unique_ptr<IScene> sceneArr_[3];
 
-	//
-	int currenSceneNo_; // 現在のシーン
-	int prevSceneNO_; // 過去のシーン
-
-
+	//どのステージを呼び出すかを管理する変数
+	int currentSceneNo_; //現在のシーン
+	int preSceneNo_; //前のシーン
+	//キー入力結果を受け取る箱
+	char keys_[256] = { 0 };
+	char preKeys_[256] = { 0 };
 
 public:
-	GameManager();
-	~GameManager();
 
-	void Init();
+	GameManager(); //コンストラクタ
 
-	int Run();
+	~GameManager(); //デストラクタ
 
-private:
-	char keys_[256], preKeys_[256];
+	int Loop(); //この関数でゲームループを呼び出す
 
 };
 

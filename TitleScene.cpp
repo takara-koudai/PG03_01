@@ -1,29 +1,21 @@
 #include "TitleScene.h"
+#include "Novice.h"
 
-void TitleScene::Init(char* keys, char* preKeys) {
-
-	keys_ = keys;
-
-	preKeys_ = preKeys;
-
-	// grHandle = Novice::LoadTexture("title.png");
+void TitleScene::Initialize()
+{
 }
 
-void TitleScene::Update() {
-
-	//if (!preKeys_[DIK_SPACE] && keys_[DIK_SPACE]) {
-	//
-	//	sceneNo = STAGE;
-	//}
-
-	if (keys_[DIK_SPACE] && preKeys_[DIK_SPACE] == 0)
+void TitleScene::Update()
+{
+	if (keys_[DIK_SPACE] && prekeys_[DIK_SPACE])
 	{
 		sceneNo = STAGE;
 	}
+	Novice::ScreenPrintf(640, 360, "Title");
+
 }
 
-void TitleScene::Draw() {
-
-	// Novice::DrawSprite(0, 0, grHandle, 1.0f, 1.0f, 0.0f, 0xFFFFFFFF);
-	Novice::ScreenPrintf(0, 0, "Title");
+void TitleScene::Draw()
+{
+	Novice::DrawBox(0, 0, 1280, 720, 0.0f, BLACK, kFillModeSolid);
 }

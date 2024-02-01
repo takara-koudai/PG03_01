@@ -1,15 +1,21 @@
 #include "ClearScene.h"
-void ClearScene::Initialize() 
-{ 
-	input_->GetInstance(); 
-}
+#include "Novice.h"
 
-void ClearScene::Update() 
+void ClearScene::Initialize()
 {
-	if (input_->TriggerKey(DIK_SPACE)) 
-	{
-		sceneNo = STAGE;
-	}
 }
 
-void ClearScene::Draw() {}
+void ClearScene::Update()
+{
+	if (keys_[DIK_SPACE] && !prekeys_[DIK_SPACE]) 
+	{
+		sceneNo = TITLE;
+	}
+
+	Novice::ScreenPrintf(640, 360, "Game Clear");
+}
+
+void ClearScene::Draw()
+{
+	Novice::DrawBox(0, 0, 1280, 720, 0.0f, BLUE, kFillModeSolid);
+}
